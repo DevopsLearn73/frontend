@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "manojkrishnappa/frontend:${GIT_COMMIT}"
+        IMAGE_NAME = "rohitkube/frontend:${GIT_COMMIT}"
     }
 
     stages {
 
         stage('Git Checkout') {
             steps {
-                git url: 'https://github.com/ITkannadigaru/frontend.git', branch: 'main'
+                git url: 'https://github.com/DevopsLearn73/frontend.git', branch: 'main'
             }
         }
 
